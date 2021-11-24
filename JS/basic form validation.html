@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
 <title>Form Validation</title>
@@ -48,4 +49,56 @@ TELEPhone
 
 
 <input type="submit" name="submit" /></td>
+=======
+<html>
+<head>
+<title>Form Validation</title>
+<script type="text/javascript"> 
+function validate(){
+if( document.myForm.Name.value == "" ){ 
+alert( "Please provide your name!" ); 
+document.myForm.Name.focus() ;
+}
+ 
+ else if( document.myForm.address.value == "" )
+ { 
+alert( "Please provide your address" ); 
+document.myForm.address.focus() ;
+}
+else if( document.myForm.Course.value == "" )
+ { 
+alert( "Select any Course" ); 
+document.myForm.Course.focus() ;
+return false;
+
+} 
+}
+
+</script> </head>
+<body>
+<form action="" name="myForm" onsubmit="return(validate());">
+
+Name
+<input type="text" name="Name" /><br>
+
+adress
+<input type="text" name="address" /><br>
+
+Email
+<input type="email" name="email"  required/><br>
+DOB
+<input type="date" id="dob"  required/><br>
+TELEPhone
+<input type="tel" id="mbno"  required/><br>
+<select name="Course" id="course">
+            <option value=1 selected="true">SelectOne</option>
+            <option value="MCA">MCA</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="B.Com">B.Com</option>
+            <option value="B.Sc">B.Sc</option>
+        </select><br>
+
+
+<input type="submit" name="submit" /></td>
+>>>>>>> origin/master
 </form> </body> </html>

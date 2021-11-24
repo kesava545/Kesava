@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
     <meta charset="utf-8" />
@@ -66,4 +67,74 @@
 
     </form>
 </body>
+=======
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>User_Give_Imp_Dis_Dyn</title>
+    <script>
+        
+        function populate(s1, s2) {
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            //document.write(s1.value);
+            s2.innerHTML = "";
+            if (s1.value == "btech") {
+                var optionArray = ["|", "ece|ECE", "cse|CSE", "eee|EEE", "mech|MECH"]
+            } else if (s1.value == "mca") {
+                var optionArray = ["|", "mca|MCA"]
+            } else if (s1.value == "bsc") {
+                var optionArray = ["|", "mpcs|MPCS", "mecs|MECS", "mpc|MPC", "bca|BCA", "cbz|CBZ"]
+            } else if (s1.value == "bcom") {
+                var optionArray = ["|", "vocational|VOCATIONAL", "general|GENERAL"]
+            }
+
+            for (var option in optionArray) {
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label>Enter Your Name : </label>
+        <input type="text" id="name" /><br /><br />
+        <label>Enter Your empId : </label>
+        <input type="email" id="email" /><br /><br />
+        <label>Enter Your DOB : </label>
+        <input type="date" id="dob" /><br /><br />
+        <label>Enter Your Mobile No : </label>
+        <input type="text" id="mbno" /><br /><br />
+        <label>Enter Your Course : </label>
+        <select id="selt1" name="selt1" onchange="populate(this.id,'selt2')">
+            <option value="">SelectOne</option>
+            <option value="mca">mca</option>
+            <option value="btech">btech</option>
+            <option value="bcom">bcom</option>
+            <option value="bsc">bsc</option>
+        </select><br><br>
+		
+        <!--<label>Select Your Stream : </label>
+        <select id="selt2" name="selt2"></select><br /><br />
+
+
+         <option value=1 selected="true">SelectOne</option>
+        <option value="MCA">MCA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="B.Com">B.Com</option>
+        <option value="B.Sc">B.Sc</option>
+    </select><br><br> -->
+        <p id="p1"></p>
+
+        <input type="button" onclick="User_Det()" value="submit" />
+        <br>
+        <br>
+
+    </form>
+</body>
+>>>>>>> origin/master
 </html>

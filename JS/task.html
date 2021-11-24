@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
 <head>
 <script>
@@ -24,3 +25,31 @@ document.write("<br>"+e.id+"<br>"+e.name+"<br>" +e.dob+ "<br>"+e.address+ "<br>"
 <body>
 </body>
 </html>
+=======
+<html>
+<head>
+<script>
+function emp(id,name,dob,address,course,number)
+{
+this.id=id;
+this.name=name;
+this.dob=dob;
+this.address=address;
+this.changeaddress=changeaddress;
+this.course=course;
+this.number=number;
+function changeaddress(otheraddress)
+{
+this.address=otheraddress;
+} 
+}
+e=new emp(21254,"Shyam","26/06/1998","mogalthur","JavaScript",9912466842);
+document.write(e.id+"<br>"+e.name+"<br>"+e.dob+ "<br>"+e.address+ "<br>" +e.course+ "<br>" +e.number+ "<br>");
+e.changeaddress("narsapur");
+document.write("<br>"+e.id+"<br>"+e.name+"<br>" +e.dob+ "<br>"+e.address+ "<br>" +e.course+ "<br>" +e.number);
+</script> 
+</head>
+<body>
+</body>
+</html>
+>>>>>>> origin/master
