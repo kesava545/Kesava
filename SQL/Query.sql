@@ -1,0 +1,24 @@
+SELECT e.ENAME,D.LOC
+FROM EMP e,DEPT d
+WHERE d.DEPTNO=e.DEPTNO
+ORDER BY LOC;
+
+
+SELECT e.ENAME,D.LOC
+FROM EMP e,DEPT d
+WHERE LOC='CHICAGO'
+
+
+SELECT   e.ENAME,D.LOC
+FROM EMP e,
+     DEPT d
+
+
+	 SELECT  e.ENAME,D.DNAME
+FROM EMP e,
+     DEPT d
+WHERE e.DEPTNO = d.DEPTNO;
+
+select e.ename , c.ename
+from emp e , emp c
+where e.empno = c.mgr and e.HIREDATE < c.HIREDATE;
